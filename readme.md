@@ -1,6 +1,6 @@
 Installation:
 
-``open terminal in root: volopat_assign``
+``open terminal in root: Volopay-Assignment``
 1. ``npm i``
 OR
 1. ``npm i express mongoose body-parser csvtojson dotenv multer``
