@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "c17337cc-6692-432f-8a17-1e60d2e43c72",
+		"name": "voplopay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28219607"
+	},
+	"item": [
+		{
+			"name": "upload csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "gF8VzM5q4/data.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get total_items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/total_items?start_date=2022&end_date=2022&department=Marketting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"total_items"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2022"
+						},
+						{
+							"key": "end_date",
+							"value": "2022"
+						},
+						{
+							"key": "department",
+							"value": "Marketting"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET nth_most_total_item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/nth_most_total_item?item_by=quantity&start_date=2022-08-26&end_date=2022-09-31&n=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"nth_most_total_item"
+					],
+					"query": [
+						{
+							"key": "item_by",
+							"value": "quantity"
+						},
+						{
+							"key": "start_date",
+							"value": "2022-08-26"
+						},
+						{
+							"key": "end_date",
+							"value": "2022-09-31"
+						},
+						{
+							"key": "n",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get monthy_sales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/monthly_sales?year=2022&product=Apple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"monthly_sales"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2022"
+						},
+						{
+							"key": "product",
+							"value": "Apple"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get department_wise sales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/percentage_of_department_wise_sold_items?start_date=2022-08-21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"percentage_of_department_wise_sold_items"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2022-08-21"
+						},
+						{
+							"key": "end_date",
+							"value": "2022-09-30",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
